@@ -2,13 +2,12 @@ from ftplib import FTP
 import json
 
 # Configuração do servidor FTP
-FTP_HOST = "10.10.0.23"
-FTP_PORT = 21  # Porta padrão do FTP
-FTP_USER = "ftp-users"  # Troque se precisar
-FTP_PASS = "Password546"  # Normalmente vazio para usuários anônimos
+FTP_HOST = "" #seu ip
+FTP_PORT = 21  
+FTP_USER = "" # user configurado no server  
+FTP_PASS = ""  # senha do user
 
 try:
-    # Conectar ao servidor FTP
     ftp = FTP()
     ftp.connect(FTP_HOST, FTP_PORT, timeout=10)  # Conecta ao servidor
     ftp.login(FTP_USER, FTP_PASS)  # Faz login
